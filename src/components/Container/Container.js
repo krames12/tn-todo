@@ -1,8 +1,14 @@
 import React from "react";
 import "./container.scss";
 
+import TodoList from "../TodoList/TodoList";
+
 function Container() {
-  return <h2>test this is a container</h2>;
+  return (
+    <div className="todo-container">
+      <TodoList />
+    </div>
+  );
 }
 
 export default Container;

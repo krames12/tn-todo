@@ -18,7 +18,29 @@ const { Consumer, Provider } = React.createContext(CONTEXT_ID);
 
 class TodoProvider extends Component {
   state = {
-    todos: []
+    todos: [
+      {
+        id: 1,
+        title: "test todo",
+        dueDate: "2019-05-20",
+        description: "optional",
+        completed: false
+      },
+      {
+        id: 2,
+        title: "todo app",
+        dueDate: "2019-05-20",
+        description: "optional",
+        completed: true
+      },
+      {
+        id: 3,
+        title: "get milk",
+        dueDate: "2019-05-20",
+        description: "optional",
+        completed: false
+      }
+    ]
   };
 
   addTodo = todo => {
@@ -35,10 +57,13 @@ class TodoProvider extends Component {
   };
 
   completeTodo = todo => {
+    console.log("inside of context completetodo");
     let revisedTodos = this.state.todos.map(todoItem => {
       if (todoItem.id === todo.id) {
         todoItem.completed = !todoItem.completed;
       }
+
+      return todoItem;
     });
 
     this.setState({ todos: revisedTodos });

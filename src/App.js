@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import TodoProvider from "./components/TodoContext/TodoContext";
-import Container from "./components/Container/container";
+import Container from "./components/Container/Container";
 
 function App() {
   return (
