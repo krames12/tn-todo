@@ -8,7 +8,6 @@ import {
   faSquare,
   faTrashAlt
 } from "@fortawesome/free-regular-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class TodoList extends Component {
@@ -28,9 +27,11 @@ class TodoList extends Component {
                   name="completed"
                   className="todo-completed-input"
                   defaultChecked={todo.completed ? "checked" : ""}
-                  onClick={() => actions.completeTodo(todo)}
                 />
-                <label htmlFor="completed">
+                <label
+                  htmlFor="completed"
+                  onClick={() => actions.completeTodo(todo)}
+                >
                   {todo.completed ? (
                     <FontAwesomeIcon icon={faCheckSquare} />
                   ) : (
@@ -42,7 +43,7 @@ class TodoList extends Component {
                   className="delete-icon"
                   onClick={() => actions.deleteTodo(todo)}
                 >
-                  <FontAwesomeIcon icon={faTimes} />
+                  <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
               </li>
             ))}
