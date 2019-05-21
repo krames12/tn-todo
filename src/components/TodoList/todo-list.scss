@@ -1,5 +1,7 @@
 .todo-list {
   padding-inline-start: 0;
+  max-width: 1200px;
+  margin: 1em auto;
 
   .todo-item {
     display: flex;
