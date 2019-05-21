@@ -44,6 +44,8 @@ class TodoProvider extends Component {
   };
 
   addTodo = todo => {
+    console.log("adding a todo");
+    console.log(todo);
     const todos = [
       ...this.state.todos,
       {

@@ -9,10 +9,13 @@ function Modal({ isOpen, closeHandler }) {
   return (
     <div className={`screen-cover ${isOpen ? "open" : ""}`}>
       <div id="modal">
-        <button className="close-modal-icon" onClick={() => closeHandler()}>
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
-        <AddTodoForm />
+        <div className="modal-header">
+          <h3>Add new to do</h3>
+          <button className="close-modal-icon" onClick={() => closeHandler()}>
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+        </div>
+        <AddTodoForm closeModal={closeHandler} />
       </div>
     </div>
   );
