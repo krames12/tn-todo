@@ -22,5 +22,17 @@
       border: none;
       background: transparent;
     }
+
+    &.completed {
+      .todo-title {
+        text-decoration: line-through;
+      }
+
+      .todo-complete-input-label,
+      .todo-title,
+      .delete-icon {
+        color: gray;
+      }
+    }
   }
 }

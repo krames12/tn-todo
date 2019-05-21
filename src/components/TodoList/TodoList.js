@@ -21,7 +21,10 @@ class TodoList extends Component {
         {({ todos, actions }) => (
           <ul className="todo-list">
             {todos.map(todo => (
-              <li className="todo-item" key={todo.id}>
+              <li
+                className={`todo-item ${todo.completed ? "completed" : ""}`}
+                key={todo.id}
+              >
                 <input
                   type="checkbox"
                   name="completed"
@@ -29,6 +32,7 @@ class TodoList extends Component {
                   defaultChecked={todo.completed ? "checked" : ""}
                 />
                 <label
+                  className="todo-complete-input-label"
                   htmlFor="completed"
                   onClick={() => actions.completeTodo(todo)}
                 >
@@ -41,7 +45,7 @@ class TodoList extends Component {
                 <p className="todo-title">{todo.title}</p>
                 <button
                   className="delete-icon"
-                  onClick={() => actions.deleteTodo(todo)}
+                  disabled={todo.completed ? "disabled" : ""}
                 >
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </button>

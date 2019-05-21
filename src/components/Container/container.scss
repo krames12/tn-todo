@@ -1,5 +1,7 @@
 .todo-container {
   width: 100%;
+  position: relative;
+  min-height: 100vh;
 
   .add-todo-button {
     background: transparent;
