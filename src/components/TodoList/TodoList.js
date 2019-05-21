@@ -46,6 +46,7 @@ class TodoList extends Component {
                 <button
                   className="delete-icon"
                   disabled={todo.completed ? "disabled" : ""}
+                  onClick={() => actions.deleteTodo(todo)}
                 >
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
