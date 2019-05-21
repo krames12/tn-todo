@@ -49,9 +49,8 @@ class TodoProvider extends Component {
     const todos = [
       ...this.state.todos,
       {
-        ...todo,
         id: uuidv4(),
-        completed: false
+        ...todo
       }
     ];
 

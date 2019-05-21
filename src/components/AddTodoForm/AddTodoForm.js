@@ -41,9 +41,9 @@ class AddTodoForm extends Component {
   };
 
   addNewCompletedTodo = callback => {
-    this.setState({ completed: true });
-    console.log(this.state);
-    callback(this.state);
+    let alteredTodo = this.state;
+    alteredTodo.completed = true;
+    callback(alteredTodo);
 
     this.setState(this.initialState);
     this.props.closeModal();
