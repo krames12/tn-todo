@@ -60,6 +60,7 @@ class AddTodoForm extends Component {
             name="title"
             placeholder="Title"
             defaultValue={this.state.title}
+            value={this.state.title}
             onChange={this.handleChange}
           />
         </fieldset>
@@ -74,6 +75,7 @@ class AddTodoForm extends Component {
               max="31"
               placeholder="Date"
               defaultValue={this.state.date}
+              value={this.state.date}
               onChange={this.handleChange}
             />
             <span>/</span>
@@ -85,6 +87,7 @@ class AddTodoForm extends Component {
               max="12"
               placeholder="Month"
               defaultValue={this.state.month}
+              value={this.state.month}
               onChange={this.handleChange}
             />
             <span>/</span>
@@ -96,6 +99,7 @@ class AddTodoForm extends Component {
               max="2050"
               placeholder="Year"
               defaultValue={this.state.year}
+              value={this.state.year}
               onChange={this.handleChange}
             />
           </div>
@@ -110,6 +114,7 @@ class AddTodoForm extends Component {
             rows="10"
             placeholder="Description"
             defaultValue={this.state.description}
+            value={this.state.description}
             onChange={this.handleChange}
           />
         </fieldset>
